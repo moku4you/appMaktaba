@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Maktaba is an atmospheric entertainment library for curious readers.">
+  <title>Maktaba | Entertainment Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" id="home">
+    <a class="brand" href="#home" aria-label="Maktaba home"><span class="brand-mark">M</span><span>maktaba</span></a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#library">Library</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+      <a class="nav-admin" href="#admin">Admin <span id="loan-count">0</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="eyebrow">The after-hours library</p>
+        <h1>Good stories.<br><em>Better nights.</em></h1>
+        <p class="hero-text">A carefully assembled collection of books, films, and odd little obsessions for your next escape.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#library">Explore the shelves <span>↗</span></a><a class="text-link" href="#services">How it works <span>→</span></a></div>
+        <div class="hero-meta"><div><strong>2,400+</strong><span>titles to wander through</span></div><div><strong>24 hrs</strong><span>checkout window to decide</span></div></div>
+      </div>
+      <div class="hero-art" aria-label="Abstract green illustration of a stacked book" role="img"><div class="art-sun"></div><div class="art-book art-book-back"></div><div class="art-book art-book-middle"></div><div class="art-book art-book-front"><span>THE<br>GREEN<br>HOUR</span></div><span class="art-note">vol. 04<br>since 1998</span></div>
+    </section>
+
+    <section class="section shell" id="library">
+      <div class="section-heading"><div><p class="eyebrow">Curated for you</p><h2>Find your next<br><em>favourite.</em></h2></div><div class="library-tools"><label class="search-box"><span>⌕</span><input id="search-input" type="search" placeholder="Search titles or authors" aria-label="Search titles or authors"></label><div class="filter-row" role="group" aria-label="Filter books"><button class="filter is-active" data-filter="all">All</button><button class="filter" data-filter="fiction">Fiction</button><button class="filter" data-filter="nonfiction">Non-fiction</button><button class="filter" data-filter="essay">Essays</button></div></div></div>
+      <div class="book-grid" id="book-grid"></div>
+    </section>
+
+    <section class="services-section" id="services"><div class="shell"><div class="section-heading compact"><div><p class="eyebrow">More than a bookshelf</p><h2>Built for the<br><em>curious.</em></h2></div><p class="section-intro">Maktaba is a small, warm corner of the internet where culture gets passed around. Take what catches your eye.</p></div><div class="service-grid"><article class="service-item"><span class="service-number">01</span><h3>Borrow freely</h3><p>Check out any title for 24 hours. No late fees, no side-eye, just a gentle nudge when it is time to return.</p><a href="#library">Browse collection →</a></article><article class="service-item"><span class="service-number">02</span><h3>Night notes</h3><p>Get one thoughtful recommendation each week, selected by a real person with very strong opinions.</p><a href="#contact">Join the list →</a></article><article class="service-item"><span class="service-number">03</span><h3>House screenings</h3><p>Monthly films, author talks, and listening sessions for people who like their entertainment a little unexpected.</p><a href="#gallery">See the room →</a></article></div></div></section>
+
+    <section class="section shell gallery-section" id="gallery"><div class="section-heading"><div><p class="eyebrow">Inside the collection</p><h2>Stories have<br><em>atmosphere.</em></h2></div><p class="section-intro">A glimpse at the corners, covers, and quiet rituals that make this place feel like yours.</p></div><div class="gallery-grid"><figure class="gallery-tile tile-large"><img src="https://images.unsplash.com/photo-1511108690759-009324a90311?auto=format&fit=crop&w=1000&q=85" alt="Stacked vintage books"><figcaption>the reading room</figcaption></figure><figure class="gallery-tile tile-tall"><img src="https://images.unsplash.com/photo-1526243741027-444d633d7365?auto=format&fit=crop&w=700&q=85" alt="Open book with handwritten notes"><figcaption>make a little room</figcaption></figure><figure class="gallery-tile tile-small"><img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=700&q=85" alt="Rows of colourful books"><figcaption>colour theory</figcaption></figure><figure class="gallery-tile tile-small accent-tile"><span>“A room without books<br>is like a body without<br>a soul.”</span><small>— cicero</small></figure></div></section>
+
+    <section class="checkout-section" id="checkout"><div class="shell checkout-layout"><div><p class="eyebrow">Take it with you</p><h2>Borrow a<br><em>good one.</em></h2><p class="section-intro">Choose a title, tell us where to send it, and we will do the rest. Your checkout stays right here in your browser.</p></div><form class="checkout-form" id="checkout-form"><label>Book<select id="book-select" required><option value="">Select a title</option></select></label><label>Your name<input id="borrower-name" type="text" placeholder="e.g. Samira Okafor" required></label><label>Email address<input id="borrower-email" type="email" placeholder="you@example.com" required></label><label>Return date<input id="return-date" type="date" required></label><button class="button button-primary" type="submit">Confirm checkout <span>→</span></button><p class="form-status" id="checkout-status" role="status"></p></form></div></section>
+
+    <section class="section shell contact-section" id="contact"><div class="contact-card"><div><p class="eyebrow">Say hello</p><h2>Keep in<br><em>touch.</em></h2></div><div><p class="section-intro">Questions, suggestions, a very persuasive case for adding a book? Our inbox is open.</p><a class="contact-email" href="mailto:hello@maktaba.library">hello@maktaba.library ↗</a><form class="contact-form" id="contact-form"><input id="contact-message" type="text" placeholder="Leave a note" required><button class="icon-button" type="submit" aria-label="Send message">→</button></form><p class="form-status" id="contact-status" role="status"></p></div></div></section>
+
+    <section class="admin-section" id="admin"><div class="shell"><div class="admin-heading"><div><p class="eyebrow">Private view</p><h2>Desk <em>notes.</em></h2></div><button class="button button-outline" id="clear-data" type="button">Clear local activity</button></div><div class="stats-grid"><div class="stat-card"><span>Active loans</span><strong id="active-loans">0</strong></div><div class="stat-card"><span>Messages</span><strong id="message-count">0</strong></div><div class="stat-card"><span>Titles available</span><strong>2,400</strong></div></div><div class="activity-panel"><div class="panel-heading"><h3>Recent checkouts</h3><span id="activity-label">Stored locally</span></div><div id="activity-list" class="activity-list"><p class="empty-state">No checkouts yet. The desk is quiet.</p></div></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="shell footer-inner"><a class="brand" href="#home"><span class="brand-mark">M</span><span>maktaba</span></a><p>For the stories that stay with you.</p><span>© 2026</span></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
